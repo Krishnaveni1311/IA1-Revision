@@ -1,0 +1,153 @@
+gcc -g p5final.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x81e: file p5final.c, line 32.
+(gdb) r
+Starting program: /home/runner/IA1-Revision/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p5final.c:32
+32    n = input();
+(gdb) s
+input () at p5final.c:4
+4   {
+(gdb) n
+6     printf("Enter the number: ");
+(gdb) n
+7     scanf("%f", &n);
+(gdb) n
+Enter the number: 25
+8     return n;
+(gdb) n
+9   }
+(gdb) n
+main () at p5final.c:33
+33    temp = my_sqrt(n);
+(gdb) s
+my_sqrt (n=25) at p5final.c:14
+14    sqrt = n/2;
+(gdb) n
+15    temp = 0;
+(gdb) n
+16    while(sqrt !=temp)
+(gdb) n
+18      temp = sqrt;
+(gdb) n
+19      sqrt = (n/temp+temp)/2;
+(gdb) n
+16    while(sqrt !=temp)
+(gdb) n
+18      temp = sqrt;
+(gdb) n
+19      sqrt = (n/temp+temp)/2;
+(gdb) n
+16    while(sqrt !=temp)
+(gdb) n
+18      temp = sqrt;
+(gdb) n
+19      sqrt = (n/temp+temp)/2;
+(gdb) n
+16    while(sqrt !=temp)
+(gdb) n
+18      temp = sqrt;
+(gdb) n
+19      sqrt = (n/temp+temp)/2;
+(gdb) n
+16    while(sqrt !=temp)
+(gdb) n
+18      temp = sqrt;
+(gdb) n
+19      sqrt = (n/temp+temp)/2;
+(gdb) n
+16    while(sqrt !=temp)
+(gdb) n
+18      temp = sqrt;
+(gdb) n
+19      sqrt = (n/temp+temp)/2;
+(gdb) n
+16    while(sqrt !=temp)
+(gdb) n
+21    return sqrt;
+(gdb) n
+22  }
+(gdb) n
+main () at p5final.c:34
+34    sqrt = my_sqrt(n);
+(gdb) s
+my_sqrt (n=25) at p5final.c:14
+14    sqrt = n/2;
+(gdb) n
+15    temp = 0;
+(gdb) n
+16    while(sqrt !=temp)
+(gdb) n
+18      temp = sqrt;
+(gdb) n
+19      sqrt = (n/temp+temp)/2;
+(gdb) n
+16    while(sqrt !=temp)
+(gdb) n
+18      temp = sqrt;
+(gdb) n
+19      sqrt = (n/temp+temp)/2;
+(gdb) n
+16    while(sqrt !=temp)
+(gdb) n
+18      temp = sqrt;
+(gdb) n
+19      sqrt = (n/temp+temp)/2;
+(gdb) n
+16    while(sqrt !=temp)
+(gdb) n
+18      temp = sqrt;
+(gdb) n
+19      sqrt = (n/temp+temp)/2;
+(gdb) n
+16    while(sqrt !=temp)
+(gdb) n
+18      temp = sqrt;
+(gdb) n
+19      sqrt = (n/temp+temp)/2;
+(gdb) n
+16    while(sqrt !=temp)
+(gdb) n
+18      temp = sqrt;
+(gdb) n
+19      sqrt = (n/temp+temp)/2;
+(gdb) n
+16    while(sqrt !=temp)
+(gdb) n
+21    return sqrt;
+(gdb) n
+22  }
+(gdb) n
+main () at p5final.c:35
+35    output(n,sqrt);
+(gdb) s
+output (n=25, sqrt=5) at p5final.c:26
+26    printf("Square root of %0.2f is:%0.2f", n, sqrt);
+(gdb) n
+27  }
+(gdb) n
+main () at p5final.c:36
+36    return 0;
+(gdb) n
+37  }(gdb) c
+Continuing.
+Square root of 25.00 is:5.00[Inferior 1 (process 225) exited normally]
+(gdb) 

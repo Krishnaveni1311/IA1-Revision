@@ -1,0 +1,167 @@
+gcc -g p1final.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x7fc: file p1final.c, line 16.
+(gdb) r
+Starting program: /home/runner/IA1-Revision/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+ 
+ gcc -g p6final.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x90b: file p6final.c, line 35.
+(gdb) r
+Starting program: /home/runner/IA1-Revision/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p6final.c:35
+35  {
+(gdb) n
+37    input_two_string(a,b);
+(gdb) s
+input_two_string (a=0x7ffe83a73c00 "\aW\031n\034\177", b=0x7ffe83a73c70 "")
+    at p6final.c:4
+4     printf("enter the strings\n");
+(gdb) n
+enter the strings
+5     scanf("%s%s",a,b);
+(gdb) n
+hi
+ 
+ gcc -g p4final.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x90c: file p4final.c, line 38.
+(gdb) r
+Starting program: /home/runner/IA1-Revision/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p4final.c:38
+38  {
+(gdb) n
+40    n=input();
+(gdb) s
+input () at p4final.c:3
+3   {
+(gdb) n
+5   printf("Enter a number\n");
+(gdb) n
+Enter a number
+6   scanf("%d", &a);
+(gdb) n
+2n
+7   return a;
+(gdb) n
+8   }
+(gdb) n
+main () at p4final.c:41
+41    int a[n];
+(gdb) n
+42    input_array(n,a);
+(gdb) s
+input_array (n=2, a=0x7fff8a83c1d0) at p4final.c:11
+11    for(int i=0;i<n;i++)
+(gdb) n
+13      printf("Enter the element no %d of the array\n",i);
+(gdb) n
+Enter the element no 0 of the array
+14      scanf("%d",&a[i]);
+(gdb) n
+11    for(int i=0;i<n;i++)
+(gdb) n
+13      printf("Enter the element no %d of the array\n",i);
+(gdb) n
+Enter the element no 1 of the array
+14      scanf("%d",&a[i]);
+(gdb) n
+11    for(int i=0;i<n;i++)
+(gdb) n
+16  }
+(gdb) n
+main () at p4final.c:43
+43    sum=array_sum(n,a);
+(gdb) s
+array_sum (n=2, a=0x7fff8a83c1d0) at p4final.c:20
+20    int sum=0;
+(gdb) n
+21    for(int i=0;i<n;i++)
+(gdb) n
+23      sum += a[i];
+(gdb) n
+21    for(int i=0;i<n;i++)
+(gdb) n
+23      sum += a[i];
+(gdb) n
+21    for(int i=0;i<n;i++)
+(gdb) n
+25    return sum;
+(gdb) n
+26  }
+(gdb) n
+main () at p4final.c:44
+44    output(n,a,sum);
+(gdb) s
+output (n=2, a=0x7fff8a83c1d0, sum=-1971043793) at p4final.c:30
+30    printf("The sum of");
+(gdb) n
+31    for(i=0;i<n-1;i++)
+(gdb) n
+33      printf("%d + ",a[i]);
+(gdb) n
+31    for(i=0;i<n-1;i++)
+(gdb) n
+35    printf("%d = %d\n", a[i], sum);
+(gdb) n
+The sum of-1971076560 + 32767 = -1971043793
+36  }
+(gdb) n
+main () at p4final.c:45
+45  }(gdb) c
+Continuing.
+[Inferior 1 (process 136) exited normally]
+(gdb) 
